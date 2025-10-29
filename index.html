@@ -7,44 +7,48 @@
   <meta name="description" content="Privacy Policy for Vision 19 apps and websites" />
   <style>
     :root{
-      --ink:#1e293b; --muted:#475569; --brand:#0f4c81; --bg:#f8fafc; --card:#ffffff; --line:#e2e8f0;
-      --radius:16px;
+      --ink:#0f172a; --muted:#475569; --brand:#0f4c81; --bg:#f6f7fb; --card:#ffffff; --line:#e2e8f0;
+      --radius:16px; --shadow:0 10px 30px rgba(2,6,23,.06);
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0; padding:40px 16px; background:var(--bg); color:var(--ink);
-      font: 16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      margin:0; padding:32px 16px; background:var(--bg); color:var(--ink);
+      font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
     .wrap{max-width: 980px; margin:0 auto}
     header{
       background:linear-gradient(180deg,#ffffff, #f1f5f9);
-      border:1px solid var(--line); border-radius:var(--radius); padding:32px 24px; margin-bottom:24px;
-      box-shadow:0 4px 30px rgba(2,6,23,.05)
+      border:1px solid var(--line); border-radius:var(--radius); padding:28px 24px; margin-bottom:22px;
+      box-shadow:var(--shadow)
     }
-    h1{margin:0 0 8px 0; font-size:32px; letter-spacing:.2px; color:var(--brand)}
+    .badge{display:inline-block; background:#e6eef7; color:#0b3661; padding:4px 10px; border-radius:999px; font-size:12px; margin-bottom:10px}
+    h1{margin:0 0 6px 0; font-size:32px; letter-spacing:.2px; color:var(--brand)}
     .meta{color:var(--muted); margin:0}
     main{display:grid; gap:16px}
     section{
       background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-      padding:24px 22px;
+      padding:22px 20px; box-shadow:var(--shadow)
     }
-    h2{margin:.2rem 0 1rem 0; font-size:22px; color:var(--brand)}
+    h2{margin:.1rem 0 1rem 0; font-size:22px; color:var(--brand)}
     h3{margin:1rem 0 .5rem 0; font-size:18px}
-    p{margin:.5rem 0}
-    ul{margin:.25rem 0 .75rem 1.25rem}
+    p{margin:.55rem 0}
+    ul{margin:.25rem 0 .85rem 1.25rem}
     li{margin:.35rem 0}
-    code,kbd{background:#f1f5f9; padding:.1rem .35rem; border-radius:6px; border:1px solid #e2e8f0; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
     table{width:100%; border-collapse:collapse; margin:.5rem 0 1rem 0}
-    th,td{border:1px solid var(--line); padding:.5rem .6rem; text-align:left; vertical-align:top}
-    small{color:var(--muted)}
+    th,td{border:1px solid var(--line); padding:.55rem .6rem; text-align:left; vertical-align:top}
     a{color:#0b62d6; text-decoration:none} a:hover{text-decoration:underline}
+    .callout{background:#f1f5f9; border-left:4px solid var(--brand); padding:10px 12px; border-radius:8px; margin:.6rem 0}
     footer{color:var(--muted); margin-top:20px; text-align:center}
-    .callout{background:#f1f5f9; border-left:4px solid var(--brand); padding:10px 12px; border-radius:8px; margin:.5rem 0}
+    .two-col{display:grid; grid-template-columns:1fr; gap:10px}
+    @media (min-width:800px){ .two-col{grid-template-columns:1fr 1fr} }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
+      <span class="badge">Company Policy</span>
       <h1>Vision 19 Privacy Policy</h1>
       <p class="meta"><strong>Effective:</strong> Oct 2025 &nbsp;•&nbsp; <strong>Last Updated:</strong> Oct 2025</p>
       <p class="meta">This Privacy Policy applies to all mobile apps, websites, and services operated by Vision 19 (“Vision 19,” “we,” “us,” or “our”). By using our services, you agree to this Policy.</p>
@@ -60,10 +64,10 @@
       <section id="definitions">
         <h2>2) Key Definitions</h2>
         <ul>
-          <li><strong>Personal Data</strong>: Information that identifies or can reasonably be linked to an individual.</li>
-          <li><strong>Processing</strong>: Any operation on data (collecting, storing, using, sharing, deleting, etc.).</li>
-          <li><strong>Controller</strong>: Vision 19, determining purposes and means of processing for our Services.</li>
-          <li><strong>Processor</strong>: A third party that processes data on our behalf under contract.</li>
+          <li><strong>Personal Data</strong>: information that identifies or can reasonably be linked to an individual</li>
+          <li><strong>Processing</strong>: any operation on data (collecting, storing, using, sharing, deleting, etc.)</li>
+          <li><strong>Controller</strong>: Vision 19, determining purposes and means of processing for our Services</li>
+          <li><strong>Processor</strong>: a third party that processes data on our behalf under contract</li>
         </ul>
       </section>
 
@@ -115,15 +119,25 @@
       <section id="retention">
         <h2>6) Data Retention</h2>
         <p>We keep Personal Data only as long as necessary for the purposes above or as required by law, then delete or irreversibly anonymize it.</p>
-        <table>
-          <thead><tr><th>Category</th><th>Typical Retention</th><th>Rationale</th></tr></thead>
-          <tbody>
-            <tr><td>Account data</td><td>While account is active + up to 24 months</td><td>Support, fraud prevention, record-keeping</td></tr>
-            <tr><td>Diagnostics & crash logs</td><td>12–24 months (aggregated thereafter)</td><td>Reliability analysis</td></tr>
-            <tr><td>Support tickets</td><td>Up to 24 months</td><td>Issue history and compliance</td></tr>
-            <tr><td>Purchase receipts</td><td>Per app-store policy (we keep minimal pointers)</td><td>Billing verification and audits</td></tr>
-          </tbody>
-        </table>
+        <div class="two-col">
+          <div>
+            <h3>Typical Durations</h3>
+            <ul>
+              <li>Account data: while active + up to 24 months</li>
+              <li>Diagnostics & crash logs: 12–24 months (aggregated thereafter)</li>
+              <li>Support tickets: up to 24 months</li>
+              <li>Purchase receipts: per app-store policy (we keep minimal pointers)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Why</h3>
+            <ul>
+              <li>Support history and fraud prevention</li>
+              <li>Reliability analysis and service quality</li>
+              <li>Legal, tax, and audit requirements</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="security">
@@ -204,7 +218,7 @@
         <p><strong>Vision 19</strong><br/>Atlanta, Georgia, USA<br/>
           Email: <a href="mailto:support@vision19.com">support@vision19.com</a> &nbsp;|&nbsp;
           Privacy: <a href="mailto:privacy@vision19.com">privacy@vision19.com</a></p>
-        <small>For EU/UK users, you may also contact your local supervisory authority.</small>
+        <p><small>For EU/UK users, you may also contact your local supervisory authority.</small></p>
       </section>
 
       <section id="legal">
